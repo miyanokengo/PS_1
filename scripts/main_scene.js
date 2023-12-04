@@ -18,6 +18,7 @@ class MyScene extends Phaser.Scene {
         this.taro = this.add.image(D_WIDTH/2, D_HEIGHT/2, 'taro');
         this.text = this.add.text(10, 10, 'Scene 1').setFontSize(32).setColor('#ff0');
         this.player_direction = 1;
+        this.text = this.add.text(400, 600, 'Scene 1').setFontSize(32).setColor('#ff0');
     }
   // 毎フレーム実行される繰り返し処理
     update() {
@@ -28,9 +29,11 @@ class MyScene extends Phaser.Scene {
         if (this.player_direction == 1) {
             this.taro.x += 5;
             this.taro.y += 5;
+            this.taro.angle += 5;
         } else {
             this.taro.x -= 5;
             this.taro.y -= 5;
+            this.taro.angle += 5;
         }
     }
 }
